@@ -6,6 +6,7 @@ RUN apk add --update \
     linux-headers \
     py2-pip \
     python-dev \
+    libxslt-dev \
     mariadb-client \
     mariadb-dev \
     zlib-dev \
