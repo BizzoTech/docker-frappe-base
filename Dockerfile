@@ -1,4 +1,4 @@
-FROM alpine:3.5
+FROM mhart/alpine-node:8.6
 MAINTAINER Emad Shaaban <emad@bizzotech.com>
 
 RUN apk add --update \
@@ -15,8 +15,7 @@ RUN apk add --update \
     xvfb \
     ttf-freefont \
     fontconfig \
-    dbus \
-    nodejs && \
+    dbus && \
     apk add wkhtmltopdf --update-cache \
         --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ \
         --allow-untrusted && \
