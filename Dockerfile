@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:8.6
+FROM mhart/alpine-node:8.8
 MAINTAINER Emad Shaaban <emad@bizzotech.com>
 
 RUN apk add --update \
