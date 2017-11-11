@@ -2,7 +2,7 @@ FROM node:8
 MAINTAINER Emad Shaaban <emad@bizzotech.com>
 
 RUN apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xcbcb082a1bb943db && \
-    add-apt-repository "deb http://ams2.mirrors.digitalocean.com/mariadb/repo/10.0/debian jessie main"
+    add-apt-repository "deb http://ams2.mirrors.digitalocean.com/mariadb/repo/10.0/debian jessie main" && \
     apt-get update && \
     apt-get install -y curl wget software-properties-common python-software-properties python-mysqldb \
           git build-essential python-setuptools python-dev libffi-dev libssl-dev  \
