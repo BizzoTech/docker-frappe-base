@@ -1,6 +1,8 @@
 FROM node:8
 MAINTAINER Emad Shaaban <emad@bizzotech.com>
 
+ENV DEBIAN_FRONTEND="noninteractive"
+
 RUN apt-get update && apt-get install -y software-properties-common python-software-properties && \
     apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xcbcb082a1bb943db && \
     add-apt-repository "deb http://ams2.mirrors.digitalocean.com/mariadb/repo/10.0/debian jessie main" && \
