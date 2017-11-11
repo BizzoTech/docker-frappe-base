@@ -1,10 +1,11 @@
 FROM node:8
 MAINTAINER Emad Shaaban <emad@bizzotech.com>
 
-RUN apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xcbcb082a1bb943db && \
+RUN apt-get install -y software-properties-common python-software-properties && \
+    apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xcbcb082a1bb943db && \
     add-apt-repository "deb http://ams2.mirrors.digitalocean.com/mariadb/repo/10.0/debian jessie main" && \
     apt-get update && \
-    apt-get install -y curl wget software-properties-common python-software-properties python-mysqldb \
+    apt-get install -y curl wget python-mysqldb \
           git build-essential python-setuptools python-dev libffi-dev libssl-dev  \
           ntp vim screen htop mariadb-common libmariadbclient-dev \
 			    libxslt1.1 libxslt1-dev libcrypto++-dev postfix libtiff5-dev libjpeg62-turbo-dev \
