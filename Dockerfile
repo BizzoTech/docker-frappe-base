@@ -12,10 +12,10 @@ RUN apt-get update && apt-get install -y software-properties-common python-softw
     apt-get update && \
     apt-get install -y --allow-unauthenticated sudo wget nodejs python-mysqldb \
           git build-essential python-setuptools python-dev libffi-dev libssl-dev  \
-          ntp screen mariadb-common libmariadbclient-dev \
+          ntp screen mariadb-common libmariadbclient-dev mariadb-client \
           libxslt1.1 libxslt1-dev libcrypto++-dev postfix libtiff5-dev libjpeg8-dev \
           liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python-tk zlib1g-dev libfreetype6-dev \
-          supervisor python-pip fontconfig libxrender1 libxext6 xfonts-75dpi xfonts-base  && \
+          python-pip fontconfig libxrender1 libxext6 xfonts-75dpi xfonts-base  && \
     rm -rf /var/lib/apt/lists/* && \
     wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/${WKHTMLTOX_VERSION}/wkhtmltox-${WKHTMLTOX_VERSION}_linux-generic-amd64.tar.xz && \
     tar xf wkhtmltox-${WKHTMLTOX_VERSION}_linux-generic-amd64.tar.xz && \
