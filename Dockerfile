@@ -17,12 +17,11 @@ RUN apt-get update && apt-get install -y software-properties-common python-softw
           liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python-tk zlib1g-dev libfreetype6-dev \
           supervisor python-pip fontconfig libxrender1 libxext6 xfonts-75dpi xfonts-base  && \
     rm -rf /var/lib/apt/lists/* && \
-    wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/$WKHTMLTOX_VERSION/wkhtmltox-$WKHTMLTOX_VERSION_linux-generic-amd64.tar.xz && \
-    tar xf wkhtmltox-$WKHTMLTOX_VERSION_linux-generic-amd64.tar.xz && \
+    wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/${WKHTMLTOX_VERSION}/wkhtmltox-${WKHTMLTOX_VERSION}_linux-generic-amd64.tar.xz && \
+    tar xf wkhtmltox-${WKHTMLTOX_VERSION}_linux-generic-amd64.tar.xz && \
     mv wkhtmltox/bin/* /usr/local/bin/ && \
-    rm wkhtmltox-$WKHTMLTOX_VERSION_linux-generic-amd64.tar.xz && \
-    wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz && \
-    tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz && \
-    rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
-
-RUN pip install --upgrade setuptools pip
+    rm wkhtmltox-${WKHTMLTOX_VERSION}_linux-generic-amd64.tar.xz && \
+    wget https://github.com/jwilder/dockerize/releases/download/${DOCKERIZE_VERSION}/dockerize-linux-amd64-${DOCKERIZE_VERSION}.tar.gz && \
+    tar -C /usr/local/bin -xzvf dockerize-linux-amd64-${DOCKERIZE_VERSION}.tar.gz && \
+    rm dockerize-linux-amd64-${DOCKERIZE_VERSION}.tar.gz && \
+    pip install --upgrade setuptools pip
