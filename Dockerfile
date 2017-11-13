@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y software-properties-common python-softw
     add-apt-repository "deb http://ams2.mirrors.digitalocean.com/mariadb/repo/10.0/ubuntu xenial main" && \
     curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
     apt-get update && \
-    apt-get install -y sudo wget nodejs python-mysqldb \
+    apt-get install -y --allow-unauthenticated sudo wget nodejs python-mysqldb \
           git build-essential python-setuptools python-dev libffi-dev libssl-dev  \
           ntp screen mariadb-common libmariadbclient-dev \
           libxslt1.1 libxslt1-dev libcrypto++-dev postfix libtiff5-dev libjpeg8-dev \
